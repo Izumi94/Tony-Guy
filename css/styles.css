@@ -10,6 +10,7 @@ body {
     background: #d8d8e2;
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
 
 ul {
@@ -69,10 +70,18 @@ ul {
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: -10px;
+
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    width: 600px;
 }
 
-.text h1::after {
-    content: "duality";
+.text h1 .hide__text {
+    position: absolute;
+}
+
+.text h2 {
     position: absolute;
     top: 40px;
     left: -80px;
@@ -81,6 +90,7 @@ ul {
     font-size: 150px;
     font-weight: 600;
     letter-spacing: 8px;
+    text-transform: uppercase;
 }
 
 .text h3 {
@@ -88,6 +98,14 @@ ul {
     text-transform: uppercase;
     font-weight: 600;
     line-height: 1;
+
+    position: relative;
+    overflow: hidden;
+    height: 80px;
+}
+
+.text h3 .hide__text {
+    position: absolute;
 }
 
 .text p {
@@ -95,6 +113,14 @@ ul {
     font-size: 12px;
     margin-top: 30px;
     font-weight: 500;
+
+    position: relative;
+    overflow: hidden;
+    height: 110px;
+}
+
+.text p .hide__text {
+    position: absolute;
 }
 
 .sponsor {

@@ -14,6 +14,10 @@
 
     <div class="wrapper">
 
+        <div class="overlay__first">
+            
+        </div>
+
         <nav class="navbar">
             <div class="navbar__menu">
                 <ion-icon name="ios-menu"></ion-icon>
@@ -33,11 +37,19 @@
         </div>
 
         <div class="text">
-            <h1>toni&guy</h1>
-            <h3>collection <br> duality </h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde quis, delectus facere
-                neque sunt commodi quae
-                culpa dolores doloribus magnam?</p>
+            <h1>
+                <span class="hide__text">toni&guy</span>
+            </h1>
+            <h2>duality</h2>
+            <h3>
+                <span class="hide__text">collection <br> duality</span>
+            </h3>
+            <p><span class="hide__text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde quis, delectus
+                    facere
+                    neque sunt commodi quae
+                    culpa dolores doloribus magnam?</span>
+            </p>
         </div>
 
         <div class="sponsor">
@@ -47,7 +59,7 @@
 
         <div class="distortion">
 
-           </div>
+        </div>
 
     </div>
     </div>
@@ -66,8 +78,67 @@
             image1: './images/01.png',
             image2: './images/02.png',
             displacementImage: './images/diss.png',
-            imagesRatio: 380/300
+            imagesRatio: 380 / 300
         })
+
+        TweenMax.from(".navbar div", 1.5, {
+            delay: 1.5,
+            y: "20",
+            ease: Expo.easeInOut
+        }, 0.08)
+
+        TweenMax.from(".media ul li", 1.5, {
+            delay: 1.5,
+            x: "-20",
+            ease: Expo.easeInOut
+        }, 0.08)
+
+        TweenMax.from(".text h1 .hide__text", 1.5, {
+            delay: 1,
+            y: "100%",
+            ease: Expo.easeInOut
+        })
+
+        TweenMax.from(".text h3 .hide__text", 1.5, {
+            delay: 1.2,
+            y: "100%",
+            ease: Expo.easeInOut
+        })
+
+        TweenMax.from(".text p .hide__text", 1.5, {
+            delay: 1.3,
+            y: "100%",
+            ease: Expo.easeInOut
+        })
+
+        TweenMax.from(".text h2", 1.5, {
+            delay: 1.5,
+            opacity: 0,
+            x: "-10000",
+            ease: Expo.easeInOut
+        })
+
+        TweenMax.from(".sponsor img", 1.5, {
+            delay: 1.5,
+            opacity: 0,
+            y: "20",
+            ease: Expo.easeInOut
+        })
+
+        TweenMax.from(".sponsor p", 1.5, {
+            delay: 1.6,
+            opacity: 0,
+            y: "20",
+            ease: Expo.easeInOut
+        })
+
+        TweenMax.from(".distortion", 1.5, {
+            delay: 2,
+            opacity: 0,
+            y: "20",
+            ease: Expo.easeInOut
+        })
+
     </script>
 
 
